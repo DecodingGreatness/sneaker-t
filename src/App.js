@@ -22,7 +22,8 @@ function App() {
           species: response.data.species.name,
           img: response.data.sprites.front_default,
           hp: response.data.stats[0].base_stat,
-          attack: response.data.stats[2].base_stat,
+          attack: response.data.stats[1].base_stat,
+          defense: response.data.stats[2].base_stat,
           type: response.data.types[0].type.name,
         });
         setSneakerChosen(true);
@@ -46,7 +47,15 @@ function App() {
         {!sneakerChosen ? (
           <h1> Please choose a Sneaker </h1>
         ) : (
-          <h1>{sneakerName}</h1>
+          <>
+            <h1>{sneaker.name}</h1>
+            <img src={sneaker.img} />
+            <h3>Species: {sneaker.species}</h3>
+            <h3>Type: {sneaker.type}</h3>
+            <h3>Hp: {sneaker.hp}</h3>
+            <h3>Attack: {sneaker.attack}</h3>
+            <h3>Defense: {sneaker.defense}</h3>
+          </>
         )}
       </div>
     </div>

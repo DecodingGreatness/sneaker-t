@@ -1,6 +1,7 @@
 .App {
   display: flex;
   justify-content: center;
+  flex-direction: column;
 }
 
 body {
@@ -41,4 +42,19 @@ body {
 
 .TitleSection button:hover {
   cursor: pointer;
+}
+
+.DisplaySection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.DisplaySection h4,
+h3 {
+  margin: 8px;
+}
+
+.DisplaySection img {
+  width: 200px;
 }
